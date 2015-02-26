@@ -5,5 +5,11 @@
 <h3>This cat's toys are...</h3>
 
 <div class="well">
-  <em> <%= link_to @toy.name, toy_path(@cat) %></em>
+  <%  @toys.each do |t| %>
+  <ul>
+    <li>
+      <em><%= t.name %></em>
+    </li>
+  </ul>
+  <% end %>
 </div>
